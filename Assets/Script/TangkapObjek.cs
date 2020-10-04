@@ -24,12 +24,14 @@ public class TangkapObjek : MonoBehaviour
             {
                 bola.transform.SetParent(tangan.transform);
                 bola.transform.localPosition = tangan.transform.localPosition;
+                bola.GetComponent<Renderer>().material.color = Color.blue;
                 tertangkap = true;
             }
             else if(tertangkap)
             {
                 bola.transform.SetParent(null);
                 bola.transform.localPosition = posisiBola;
+                bola.GetComponent<Renderer>().material.color = Color.red;
                 tertangkap = false;
             }
             
